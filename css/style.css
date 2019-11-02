@@ -163,6 +163,9 @@ body {
 .mobile-nav-on {
   overflow: hidden;
 }
+.live-2d-widget {
+  opacity: 0.9 !important;
+}
 #wrap {
   height: 100%;
   width: 100%;
