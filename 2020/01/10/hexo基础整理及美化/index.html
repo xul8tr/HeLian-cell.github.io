@@ -64,7 +64,7 @@
 <meta property="og:image" content="http://yoursite.com/images/hexo%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E5%8F%8A%E7%BE%8E%E5%8C%96/3.PNG">
 <meta property="og:image" content="http://yoursite.com/images/hexo%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E5%8F%8A%E7%BE%8E%E5%8C%96/4.PNG">
 <meta property="og:image" content="http://yoursite.com/images/hexo%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E5%8F%8A%E7%BE%8E%E5%8C%96/5.png">
-<meta property="og:updated_time" content="2020-01-10T14:15:53.864Z">
+<meta property="og:updated_time" content="2020-01-10T14:22:11.849Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo基础整理及美化">
 <meta name="twitter:description" content="引言hexo的一些基础操作和美化">
@@ -223,7 +223,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-10 20:12:20 / 修改时间：22:15:53" itemprop="dateCreated datePublished" datetime="2020-01-10T20:12:20+08:00">2020-01-10</time>
+              <time title="创建时间：2020-01-10 20:12:20 / 修改时间：22:22:11" itemprop="dateCreated datePublished" datetime="2020-01-10T20:12:20+08:00">2020-01-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -288,14 +288,14 @@
 </tbody></table>
 <!-- more -->
 
-<h2 id="添加看板娘"><a href="#添加看板娘" class="headerlink" title="添加看板娘"></a>添加看板娘</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+<h1 id="添加看板娘"><a href="#添加看板娘" class="headerlink" title="添加看板娘"></a>添加看板娘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
 
 <p><strong>然后在站点的配置文件中，也就是和<code>source</code>同级目录的<code>_config.yml</code>里面添加上：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 看板娘</span><br><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: false # 老版本需要设置为true，然后在页面中加入&#123;&#123; live2d() &#125;&#125; &lt;- 并不推荐</span><br><span class="line">  log: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-shizuku # 设置添加的模型</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true # 是否在移动端页面上展示</span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
 
 <!-- more -->
 
-<h2 id="修改侧边栏透明度"><a href="#修改侧边栏透明度" class="headerlink" title="修改侧边栏透明度"></a>修改侧边栏透明度</h2><p><strong>1) 修改<code>themes/next/source/css/_schemes/Pisces/_layout.styl</code>的以下节点下的<code>background</code>属性</strong></p>
+<h1 id="修改侧边栏透明度"><a href="#修改侧边栏透明度" class="headerlink" title="修改侧边栏透明度"></a>修改侧边栏透明度</h1><p><strong>1) 修改<code>themes/next/source/css/_schemes/Pisces/_layout.styl</code>的以下节点下的<code>background</code>属性</strong></p>
 <ul>
 <li><code>.header-inner</code>节点: 由<code>white</code>改为<code>rgba(255,255,255,0.75);</code>(0.75表示透明度。0-全透明;1-不透明)</li>
 <li><code>.content-wrap</code>节点：由<code>white</code>改为<code>rgba(255,255,255,0);</code></li>
@@ -304,7 +304,7 @@
 <p><strong>2) 在同一个文件夹下<code>_sidebar.styl</code>的<code>..sidebar-inner</code>节点下的<code>background</code>属性由<code>white;</code>改成<code>rgba(255,255,255,0.75);</code></strong></p>
 <!-- more -->
 
-<h2 id="设置文章置顶"><a href="#设置文章置顶" class="headerlink" title="设置文章置顶"></a>设置文章置顶</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<h1 id="设置文章置顶"><a href="#设置文章置顶" class="headerlink" title="设置文章置顶"></a>设置文章置顶</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
 
 <p><strong>然后在需要置顶的文章的<code>Front-matter</code>中加上<code>top: true</code>或 <code>top: 10</code>即可。</strong></p>
 <p><strong>不过置顶的文章显示在最上面之后，如果没有明确的置顶标志，是不是感觉有点怪怪的呢？</strong></p>
@@ -315,7 +315,7 @@
 <p><img src="/images/hexo%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E5%8F%8A%E7%BE%8E%E5%8C%96/2.PNG" alt></p>
 <!-- more -->
 
-<h2 id="插入网易云歌单"><a href="#插入网易云歌单" class="headerlink" title="插入网易云歌单"></a>插入网易云歌单</h2><p><img src="/images/hexo%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E5%8F%8A%E7%BE%8E%E5%8C%96/3.PNG" alt></p>
+<h1 id="插入网易云歌单"><a href="#插入网易云歌单" class="headerlink" title="插入网易云歌单"></a>插入网易云歌单</h1><p><img src="/images/hexo%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E5%8F%8A%E7%BE%8E%E5%8C%96/3.PNG" alt></p>
 <p><strong>有的歌曲没版权插入后不播放，记得挨个挨个试哦</strong></p>
 <p>1) 这里可以设置外链播放器的类型，尺寸等参数，设置完成过后复制下面的外链接</p>
 <p><img src="/images/hexo%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E5%8F%8A%E7%BE%8E%E5%8C%96/4.PNG" alt></p>
@@ -325,7 +325,7 @@
 <p><img src="/images/hexo%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E5%8F%8A%E7%BE%8E%E5%8C%96/5.png" alt></p>
 <!-- more -->
 
-<h2 id="设置鼠标爱心特效"><a href="#设置鼠标爱心特效" class="headerlink" title="设置鼠标爱心特效"></a>设置鼠标爱心特效</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+<h1 id="设置鼠标爱心特效"><a href="#设置鼠标爱心特效" class="headerlink" title="设置鼠标爱心特效"></a>设置鼠标爱心特效</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
 
 <p><strong>将里面的代码复制下来，在<code>/yoursite/themes/next/source/js/src</code>文件夹里面新建一个<code>love.js</code>，将刚刚复制的代码保存进去。</strong></p>
 <p><strong>然后打开<code>/yoursite/themes/next/layout/_layout.swig</code>，在末尾添加以下代码：</strong></p>
@@ -393,7 +393,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建文章"><span class="nav-number">2.</span> <span class="nav-text">创建文章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加看板娘"><span class="nav-number">2.1.</span> <span class="nav-text">添加看板娘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改侧边栏透明度"><span class="nav-number">2.2.</span> <span class="nav-text">修改侧边栏透明度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置文章置顶"><span class="nav-number">2.3.</span> <span class="nav-text">设置文章置顶</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入网易云歌单"><span class="nav-number">2.4.</span> <span class="nav-text">插入网易云歌单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置鼠标爱心特效"><span class="nav-number">2.5.</span> <span class="nav-text">设置鼠标爱心特效</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建文章"><span class="nav-number">2.</span> <span class="nav-text">创建文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加看板娘"><span class="nav-number">3.</span> <span class="nav-text">添加看板娘</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改侧边栏透明度"><span class="nav-number">4.</span> <span class="nav-text">修改侧边栏透明度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置文章置顶"><span class="nav-number">5.</span> <span class="nav-text">设置文章置顶</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入网易云歌单"><span class="nav-number">6.</span> <span class="nav-text">插入网易云歌单</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置鼠标爱心特效"><span class="nav-number">7.</span> <span class="nav-text">设置鼠标爱心特效</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
