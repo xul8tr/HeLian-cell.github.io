@@ -25,7 +25,7 @@ const ap = new APlayer({
         artist: 'RADWIMPS',
         url: '/dist/music/夢灯籠.mp3',
         cover: 'dist/music/yourname.jpg',
-        lrc: '/dist/music/夢灯籠.lrc'
+        lrc: '/dist/music/夢灯籠.lrc',
       },
     ]
 });
