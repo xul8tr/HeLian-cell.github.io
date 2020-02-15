@@ -14,9 +14,9 @@ const ap = new APlayer({
         {
             name: '前前世世',
             artist: 'RADWIMPS',
-            url: 'Hexo/source/resources/music/yourname.mp3',
-            cover: 'Hexo/source/resources/music/yourname.jpg',
-            lrc: 'Hexo/source/resources/music/yourname.lrc',
+            url: '/resources/music/yourname.mp3',
+            cover: '/resources/music/yourname.jpg',
+            lrc: '/resources/music/yourname.lrc',
         },
         {
             name: '光年之外',
