@@ -8,14 +8,14 @@ const ap = new APlayer({
     preload: 'auto', //预加载，可选值: 'none', 'metadata', 'auto'
     volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
     mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
-    listFolded: true, //列表默认折叠
+    listFolded: true, //列表是否默认折叠
     listMaxHeight: 90, //列表最大高度
     lrcType: 3, //歌词传递方式
     audio: [
 	{
         name: '前前世世',
         artist: 'RADWIMPS',
-        url: '/dist/music/yourname.mp3',
+        url: '/dist/music/前前世世 - RADWIMPS.mp3',
         cover: '/dist/music/yourname.jpg',
         lrc: '/dist/music/yourname.lrc',
         
