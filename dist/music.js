@@ -14,9 +14,9 @@ const ap = new APlayer({
         {
             name: '前前世世',
             artist: 'RADWIMPS',
-            url: '/music/yourname.mp3',
-            cover: '/music/yourname.jpg',
-            lrc: '/music/yourname.lrc',
+            url: 'dist/music/yourname.mp3',
+            cover: 'dist/music/yourname.jpg',
+            lrc: 'dist/music/yourname.lrc',
         },
         {
             name: '光年之外',
