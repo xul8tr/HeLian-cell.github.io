@@ -13,10 +13,11 @@ const ap = new APlayer({
     lrcType: 0, //歌词传递方式
     audio: [
 	{
-        name: "思念是一种病",
-        artist: '张震岳 / 蔡健雅',
-        url: 'http://www.ytmp3.cn/down/50020.mp3',
-        cover: 'http://p2.music.126.net/N61oLy0iLfEkZTHD2j87iA==/18693896697392706.jpg?param=130y130',
+        name: "前前世世"",
+        artist: 'RADWIMPS',
+        url: "/dist/music/yourname.mp3",
+        cover: "/dist/music/yourname.mp3",
+        lrc: "/dist/music/yourname.lrc"
       },
 	  {
         name: "这就是爱情",
