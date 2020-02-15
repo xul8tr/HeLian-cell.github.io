@@ -13,7 +13,7 @@ const ap = new APlayer({
     lrcType: 0, //歌词传递方式
     audio: [
 	{
-        name: "前前世世"",
+        name: '前前世世',
         artist: 'RADWIMPS',
         url: '/dist/music/yourname.mp3',
         cover: '/dist/music/yourname.mp3',
