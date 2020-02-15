@@ -51,21 +51,21 @@
   };
 </script>
 
-  <meta name="description" content="Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数的坑写篇安装日记。。。  要么什么都别做，做就做到直至自己满意为止">
+  <meta name="description" content="Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数个坑写篇安装日记。。。  要么什么都别做，做就做到直至自己满意为止">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Aplayer全站设置">
 <meta property="og:url" content="http://yoursite.com/2020/Aplayer全站设置/index.html">
 <meta property="og:site_name" content="赫连的博客 | 一个对世界没有用的人~">
-<meta property="og:description" content="Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数的坑写篇安装日记。。。  要么什么都别做，做就做到直至自己满意为止">
+<meta property="og:description" content="Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数个坑写篇安装日记。。。  要么什么都别做，做就做到直至自己满意为止">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/Aplayer%E5%AE%89%E8%A3%85/1.jpg">
 <meta property="og:image" content="http://yoursite.com/images/Aplayer%E5%AE%89%E8%A3%85/2.jpg">
 <meta property="og:image" content="http://yoursite.com/images/Aplayer%E5%AE%89%E8%A3%85/3.jpg">
-<meta property="og:updated_time" content="2020-02-15T15:07:21.919Z">
+<meta property="og:updated_time" content="2020-02-15T15:21:24.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Aplayer全站设置">
-<meta name="twitter:description" content="Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数的坑写篇安装日记。。。  要么什么都别做，做就做到直至自己满意为止">
+<meta name="twitter:description" content="Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数个坑写篇安装日记。。。  要么什么都别做，做就做到直至自己满意为止">
 <meta name="twitter:image" content="http://yoursite.com/images/Aplayer%E5%AE%89%E8%A3%85/1.jpg">
 
 <link rel="canonical" href="http://yoursite.com/2020/Aplayer全站设置/">
@@ -221,7 +221,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-15 22:07:31 / 修改时间：23:07:21" itemprop="dateCreated datePublished" datetime="2020-02-15T22:07:31+08:00">2020-02-15</time>
+              <time title="创建时间：2020-02-15 22:07:31 / 修改时间：23:21:24" itemprop="dateCreated datePublished" datetime="2020-02-15T22:07:31+08:00">2020-02-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -246,7 +246,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数的坑写篇安装日记。。。</p>
+        <p>Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数个坑写篇安装日记。。。</p>
 <hr>
 <p>要么什么都别做，做就做到直至自己满意为止</p>
 <a id="more"></a>
@@ -257,11 +257,31 @@
 
 <p>给上官方文档，反正我看半天越看越迷茫。。。</p>
 <p><a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">https://aplayer.js.org/#/zh-Hans/</a></p>
-<p><code>这里面有个坑：执行上面命令去站点source/目录下查看是否有dist文件夹，如果没有手动去官网下载压缩包，把里面dist文件复制到source文件夹下</code></p>
+<p><code>这里面有个坑：执行上面命令去themes/next/source/目录下查看是否有dist文件夹，如果没有手动去官网下载压缩包，把里面dist文件复制到source文件夹下</code></p>
 <p><img src="/images/Aplayer%E5%AE%89%E8%A3%85/1.jpg" alt></p>
 <p><code>如果没有上图的dist文件夹去官网下载压缩包</code></p>
 <p><img src="/images/Aplayer%E5%AE%89%E8%A3%85/2.jpg" alt></p>
 <p><img src="/images/Aplayer%E5%AE%89%E8%A3%85/3.jpg" alt></p>
+<h1 id="musicPlay-js"><a href="#musicPlay-js" class="headerlink" title="musicPlay.js"></a>musicPlay.js</h1><p>在<code>/themes/next/source/dist</code>创建一个js文件，你可以在任意位置创建，只要最后能引用它就好了。</p>
+<figure class="highlight roboconf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">const ap = new APlayer(&#123;</span><br><span class="line">    <span class="attribute">container</span>: document<span class="variable">.getElementById</span>('aplayer'),</span><br><span class="line">    fixed: true,</span><br><span class="line">    autoplay: false,</span><br><span class="line">    audio: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: "PDD洪荒之力",</span><br><span class="line">        artist: '徐梦圆',</span><br><span class="line">        url: 'http://up<span class="variable">.mcyt</span><span class="variable">.net</span>/?down/39868<span class="variable">.mp</span>3',</span><br><span class="line">        cover: 'http://oeff2vktt<span class="variable">.bkt</span><span class="variable">.clouddn</span><span class="variable">.com</span>/image/84<span class="variable">.jpg</span>',</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: '9420',</span><br><span class="line">        artist: '麦小兜',</span><br><span class="line">        url: 'http://up<span class="variable">.mcyt</span><span class="variable">.net</span>/?down/45967<span class="variable">.mp</span>3',</span><br><span class="line">        cover: 'http://oeff2vktt<span class="variable">.bkt</span><span class="variable">.clouddn</span><span class="variable">.com</span>/image/8<span class="variable">.jpg</span>',</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: '风筝误',</span><br><span class="line">        artist: '刘珂矣',</span><br><span class="line">        url: 'http://up<span class="variable">.mcyt</span><span class="variable">.net</span>/?down/46644<span class="variable">.mp</span>3',</span><br><span class="line">        cover: 'http://oeff2vktt<span class="variable">.bkt</span><span class="variable">.clouddn</span><span class="variable">.com</span>/image/96<span class="variable">.jpg</span>',</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>fixed: true</code> 吸底模式</p>
+</li>
+<li><p><code>autoplay: false</code> 自动播放</p>
+</li>
+<li><p><code>name:歌曲名称</code></p>
+</li>
+<li><p><code>url:音乐链接，可使用第三方外链</code></p>
+</li>
+<li><p><code>cover:音乐封面</code></p>
+</li>
+<li><p><code>lrc:音乐歌词</code></p>
+</li>
+<li><p>详细内容官方文档查阅，上面这些参数已经足矣</p>
+<p><a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">https://aplayer.js.org/#/zh-Hans/</a></p>
+</li>
+</ul>
 
     </div>
 
@@ -324,7 +344,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#musicPlay-js"><span class="nav-number">2.</span> <span class="nav-text">musicPlay.js</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
