@@ -65,7 +65,7 @@
 <meta property="og:image" content="http://yoursite.com/images/Aplayer%E5%AE%89%E8%A3%85/1.jpg">
 <meta property="og:image" content="http://yoursite.com/images/Aplayer%E5%AE%89%E8%A3%85/2.jpg">
 <meta property="og:image" content="http://yoursite.com/images/Aplayer%E5%AE%89%E8%A3%85/3.jpg">
-<meta property="og:updated_time" content="2020-02-15T15:27:54.807Z">
+<meta property="og:updated_time" content="2020-02-15T15:39:24.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Aplayer全站设置">
 <meta name="twitter:description" content="Aplayer一款优秀的音乐播放器，无奈官网介绍不说人话，爬了无数个坑写篇安装日记。。。  要么什么都别做，做就做到直至自己满意为止">
@@ -224,7 +224,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-15 22:07:31 / 修改时间：23:27:54" itemprop="dateCreated datePublished" datetime="2020-02-15T22:07:31+08:00">2020-02-15</time>
+              <time title="创建时间：2020-02-15 22:07:31 / 修改时间：23:39:24" itemprop="dateCreated datePublished" datetime="2020-02-15T22:07:31+08:00">2020-02-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -285,18 +285,25 @@
 </li>
 <li><p><code>autoplay: false</code> 自动播放</p>
 </li>
-<li><p><code>name:歌曲名称</code></p>
+<li><p><code>name：歌曲名称</code></p>
 </li>
-<li><p><code>url:音乐链接，可使用第三方外链</code></p>
+<li><p><code>url：音乐链接，可使用第三方外链</code></p>
 </li>
-<li><p><code>cover:音乐封面</code></p>
+<li><p><code>cover：音乐封面</code></p>
 </li>
-<li><p><code>lrc:音乐歌词</code></p>
+<li><p><code>lrc：音乐歌词</code></p>
 </li>
 <li><p>详细内容官方文档查阅，上面这些参数已经足矣</p>
 <p><a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">https://aplayer.js.org/#/zh-Hans/</a></p>
 </li>
 </ul>
+<h1 id="layout-swig"><a href="#layout-swig" class="headerlink" title="_layout.swig"></a>_layout.swig</h1><p>打开<code>/themes/next/layout/_layout.swig</code>，将</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link <span class="attribute">rel</span>=<span class="string">"stylesheet"</span> <span class="attribute">href</span>=<span class="string">"/dist/APlayer.min.css"</span>&gt;</span><br><span class="line">  &lt;div <span class="attribute">id</span>=<span class="string">"aplayer"</span>&lt;/div&gt;</span><br><span class="line">  &lt;script <span class="attribute">src</span>=<span class="string">"/dist/APlayer.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script <span class="attribute">src</span>=<span class="string">"/dist/musicPlay.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>添加到<code>&lt;body&gt;里面</code>后，刷新网页就可以左下角出现播放器了。</p>
+<h1 id="设置全站Aplayer"><a href="#设置全站Aplayer" class="headerlink" title="设置全站Aplayer"></a>设置全站Aplayer</h1><p>何为全站？默认安装的你点击篇文章就会停止播放，进行跳转，在重新播放，为避免该情况发生，继而称为全站设置</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">使用pjax，页面跳转不重新播放 <span class="symbol">https:</span>/<span class="regexp">/github.com/theme</span>-<span class="keyword">next</span>/theme-<span class="keyword">next</span>-pjax</span><br><span class="line"></span><br><span class="line">git clone <span class="symbol">https:</span>/<span class="regexp">/github.com/theme</span>-<span class="keyword">next</span>/theme-<span class="keyword">next</span>-pjax source/<span class="class"><span class="keyword">lib</span>/<span class="title">pjax</span></span></span><br><span class="line"></span><br><span class="line">Enable <span class="class"><span class="keyword">module</span> <span class="title">in</span> <span class="title">NexT</span> <span class="title">_config</span>.<span class="title">yml</span> <span class="title">file</span> <span class="title">and</span> <span class="title">select</span> <span class="title">your</span> <span class="title">theme</span>:</span></span><br><span class="line"><span class="symbol">pjax:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">vendors:</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="symbol">pjax:</span> /<span class="regexp">/cdn.jsdelivr.net/gh</span><span class="regexp">/theme-next/theme</span>-<span class="keyword">next</span>-pjax@<span class="number">0</span>/pjax.min.js</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -359,7 +366,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#musicPlay-js"><span class="nav-number">2.</span> <span class="nav-text">musicPlay.js</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#musicPlay-js"><span class="nav-number">2.</span> <span class="nav-text">musicPlay.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#layout-swig"><span class="nav-number">3.</span> <span class="nav-text">_layout.swig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置全站Aplayer"><span class="nav-number">4.</span> <span class="nav-text">设置全站Aplayer</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
