@@ -21,10 +21,11 @@ const ap = new APlayer({
         
       },
 	  {
-        name: "这就是爱情",
-        artist: '李代沫',
-        url: 'http://www.ytmp3.cn/down/54477.mp3',
-        cover: 'http://p1.music.126.net/RQBF9kqZb7PtLCaOxi9ngQ==/109951163053984533.jpg?param=130y130',
+        name: '夢灯籠',
+        artist: 'RADWIMPS',
+        url: '/dist/music/夢灯籠.mp3',
+        cover: 'dist/music/yourname.jpg',
+        lrc: '/dist/music/夢灯籠.lrc'
       },
     ]
 });
