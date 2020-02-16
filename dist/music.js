@@ -10,7 +10,7 @@ const ap = new APlayer({
     mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
     listFolded: true, //列表是否默认折叠
     listMaxHeight: 90, //列表最大高度
-    lrcType: 2, //歌词传递方式
+    lrcType: 3, //歌词传递方式
     audio: [
 	{
         name: '前前世世',
