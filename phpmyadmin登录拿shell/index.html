@@ -51,20 +51,28 @@
   };
 </script>
 
-  <meta name="description" content="修改next主题下代码块的样式  惑：心疑不定，不明白对还是不对：疑惑。困惑。惶惑。智者不惑。使迷乱：迷惑。惑乱。惑人耳目。蛊惑人心，对事物或人不清晰不清楚，找不到答案。">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="引言当你能够登录到phpmyadmin时，却因为不知下一步渗透如何进行，其实完全可以在数据库写段shell了(ps: 前提你得有权限哈），然后直接get！">
+<meta name="keywords" content="提权">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo代码块高亮">
-<meta property="og:url" content="http://yoursite.com/2020/hexo代码块高亮/index.html">
+<meta property="og:title" content="phpmyadmin登录拿shell">
+<meta property="og:url" content="http://yoursite.com/phpmyadmin登录拿shell/index.html">
 <meta property="og:site_name" content="赫连的博客 | 一个对世界没有用的人~">
-<meta property="og:description" content="修改next主题下代码块的样式  惑：心疑不定，不明白对还是不对：疑惑。困惑。惶惑。智者不惑。使迷乱：迷惑。惑乱。惑人耳目。蛊惑人心，对事物或人不清晰不清楚，找不到答案。">
+<meta property="og:description" content="引言当你能够登录到phpmyadmin时，却因为不知下一步渗透如何进行，其实完全可以在数据库写段shell了(ps: 前提你得有权限哈），然后直接get！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-16T06:28:31.684Z">
+<meta property="og:image" content="http://yoursite.com/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/1.png">
+<meta property="og:image" content="http://yoursite.com/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/2.png">
+<meta property="og:image" content="http://yoursite.com/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/3.png">
+<meta property="og:image" content="http://yoursite.com/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/4.png">
+<meta property="og:image" content="http://yoursite.com/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/5.png">
+<meta property="og:image" content="http://yoursite.com/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/6.png">
+<meta property="og:image" content="http://yoursite.com/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/7.png">
+<meta property="og:updated_time" content="2020-01-20T14:30:45.999Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo代码块高亮">
-<meta name="twitter:description" content="修改next主题下代码块的样式  惑：心疑不定，不明白对还是不对：疑惑。困惑。惶惑。智者不惑。使迷乱：迷惑。惑乱。惑人耳目。蛊惑人心，对事物或人不清晰不清楚，找不到答案。">
+<meta name="twitter:title" content="phpmyadmin登录拿shell">
+<meta name="twitter:description" content="引言当你能够登录到phpmyadmin时，却因为不知下一步渗透如何进行，其实完全可以在数据库写段shell了(ps: 前提你得有权限哈），然后直接get！">
+<meta name="twitter:image" content="http://yoursite.com/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/1.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/hexo代码块高亮/">
+<link rel="canonical" href="http://yoursite.com/phpmyadmin登录拿shell/">
 
 
 <script id="page-configurations">
@@ -78,7 +86,7 @@
   };
 </script>
 
-  <title>hexo代码块高亮 | 赫连的博客 | 一个对世界没有用的人~</title>
+  <title>phpmyadmin登录拿shell | 赫连的博客 | 一个对世界没有用的人~</title>
   
 
 
@@ -192,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/hexo代码块高亮/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/phpmyadmin登录拿shell/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -205,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo代码块高亮
+          phpmyadmin登录拿shell
         </h1>
 
         <div class="post-meta">
@@ -216,14 +224,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-11 19:24:58" itemprop="dateCreated datePublished" datetime="2020-02-11T19:24:58+08:00">2020-02-11</time>
+              <time title="创建时间：2019-11-04 00:59:02" itemprop="dateCreated datePublished" datetime="2019-11-04T00:59:02+08:00">2019-11-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-16 14:28:31" itemprop="dateModified" datetime="2020-02-16T14:28:31+08:00">2020-02-16</time>
+                <time title="修改时间：2020-01-20 22:30:45" itemprop="dateModified" datetime="2020-01-20T22:30:45+08:00">2020-01-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -231,8 +239,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/PhpMyAdmin/" itemprop="url" rel="index">
+                    <span itemprop="name">PhpMyAdmin</span>
                   </a>
                 </span>
             </span>
@@ -248,27 +256,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>修改next主题下代码块的样式</p>
-<hr>
-<p>惑：心疑不定，不明白对还是不对：疑惑。困惑。惶惑。智者不惑。使迷乱：迷惑。惑乱。惑人耳目。蛊惑人心，对事物或人不清晰不清楚，找不到答案。</p>
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>当你能够登录到phpmyadmin时，却因为不知下一步渗透如何进行，其实完全可以在数据库写段shell了(ps: 前提你得有权限哈），然后直接get！</p>
 <a id="more"></a>
 
-<h1 id="修改的地方如下"><a href="#修改的地方如下" class="headerlink" title="修改的地方如下"></a>修改的地方如下</h1><ul>
-<li>主题的<code>_config.yml</code>文件    hexo/_config.yml</li>
-<li>站点的<code>_config.yml</code>文件    hexo/themes/next/_config.yml</li>
-</ul>
-<p>在主题的配置处查找<code>hightlight</code>并将<code>false</code>全部设置为<code>true</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  line_number:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  auto_detect:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  tab_replace:</span></span><br></pre></td></tr></table></figure>
-
-<p>在去站点的配置文件处查找<code>highlight_theme: normal</code>,删掉normal，修改其余主题:</p>
+<h1 id="下图就是目标"><a href="#下图就是目标" class="headerlink" title="下图就是目标"></a>下图就是目标</h1><p><img src="/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/1.png" alt></p>
+<p>尝试弱密码 root：root成功登录！</p>
+<p><img src="/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/2.png" alt></p>
+<h1 id="看下权限！"><a href="#看下权限！" class="headerlink" title="看下权限！"></a>看下权限！</h1><p><img src="/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/3.png" alt></p>
+<p><strong>拥有所有权限，我们可以直接修改phpmyadmin日志写shell</strong></p>
+<p><em>ps： 设置了 general_log 和 general_log_file 之后所有SQL记录都会写入指定的文件</em> </p>
+<p><img src="/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/4.png" alt></p>
+<p>可以看到默认是关闭的，但是我们就是要把他开开，如下</p>
+<p><img src="/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/5.png" alt></p>
 <ul>
-<li>normal</li>
-<li>night</li>
-<li>night eighties</li>
-<li>night blue</li>
-<li>night bright</li>
+<li><strong>general log ON 开启</strong></li>
+<li><strong>general log file 一定以实际情况为准，最后把路径最后随便修改1个php文件，配合写入一句话</strong>。</li>
 </ul>
-<p><a href="http://theme-next.iissnan.com/theme-settings.html#syntax-highlight-scheme" target="_blank" rel="noopener">Next主题配置</a></p>
+<p><strong>然后我们直接在数据库中写入一句话</strong></p>
+<p><img src="/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/6.png" alt></p>
+<p><strong><em>可以看到已经成功写入，注意写入的前提一定要有权限否则无法修改 general log，后续操作也无法进行！！！！！！</em></strong></p>
+<h2 id="直接蚁剑-amp-菜刀连接"><a href="#直接蚁剑-amp-菜刀连接" class="headerlink" title="直接蚁剑&amp;菜刀连接"></a>直接蚁剑&amp;菜刀连接</h2><p><img src="/images/phpmyadmin%E7%99%BB%E5%BD%95%E6%8B%BFshell/7.png" alt></p>
+<p>成功连接！！！</p>
 
     </div>
 
@@ -278,23 +286,20 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag">hexo</i>
+              <a href="/tags/提权/" rel="tag"><i class="fa fa-tag">提权</i>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2020/Python发邮件/" rel="next" title="Python发邮件">
-                  <i class="fa fa-chevron-left"></i> Python发邮件
-                </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2020/异或注入的认识/" rel="prev" title="异或注入的认识">
-                  异或注入的认识 <i class="fa fa-chevron-right"></i>
+                <a href="/简单的sql手工注入/" rel="prev" title="简单的sql手工注入">
+                  简单的sql手工注入 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -334,7 +339,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#修改的地方如下"><span class="nav-number">1.</span> <span class="nav-text">修改的地方如下</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下图就是目标"><span class="nav-number">2.</span> <span class="nav-text">下图就是目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#看下权限！"><span class="nav-number">3.</span> <span class="nav-text">看下权限！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直接蚁剑-amp-菜刀连接"><span class="nav-number">3.1.</span> <span class="nav-text">直接蚁剑&amp;菜刀连接</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
