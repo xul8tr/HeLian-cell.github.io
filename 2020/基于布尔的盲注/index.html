@@ -72,7 +72,7 @@
 <meta property="og:image" content="http://yoursite.com/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/7.jpg">
 <meta property="og:image" content="http://yoursite.com/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/11.jpg">
 <meta property="og:image" content="http://yoursite.com/images/%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8/12.jpg">
-<meta property="og:updated_time" content="2020-02-16T10:42:19.781Z">
+<meta property="og:updated_time" content="2020-02-16T14:53:10.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于布尔的盲注">
 <meta name="twitter:description" content="基于布尔的盲注">
@@ -237,7 +237,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-16 18:42:19" itemprop="dateModified" datetime="2020-02-16T18:42:19+08:00">2020-02-16</time>
+                <time title="修改时间：2020-02-16 22:53:10" itemprop="dateModified" datetime="2020-02-16T22:53:10+08:00">2020-02-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,7 +262,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="基于布尔的盲注"><a href="#基于布尔的盲注" class="headerlink" title="基于布尔的盲注"></a>基于布尔的盲注</h1><a id="more"></a>
+        <p>基于布尔的盲注</p>
+<a id="more"></a>
 
 <h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">length</span><span class="params">()</span></span> 返回字符串的长度</span><br><span class="line"><span class="function"><span class="title">substr</span><span class="params">()</span></span> 截取字符串</span><br><span class="line"><span class="function"><span class="title">ascii</span><span class="params">()</span></span> 以ascii码形式转换</span><br><span class="line">limit <span class="number">0</span>,<span class="number">1</span> 从你的表中的第<span class="number">0</span>个数据开始，只读取一个</span><br><span class="line"><span class="function"><span class="title">COUNT</span><span class="params">(*)</span></span> 函数返回在给定的选择中被选的行数</span><br></pre></td></tr></table></figure>
 
@@ -410,7 +411,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于布尔的盲注"><span class="nav-number">1.</span> <span class="nav-text">基于布尔的盲注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">2.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询数据库长度"><span class="nav-number">3.</span> <span class="nav-text">查询数据库长度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取数据库名称"><span class="nav-number">4.</span> <span class="nav-text">获取数据库名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询有几张表"><span class="nav-number">5.</span> <span class="nav-text">查询有几张表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询每张表的长度"><span class="nav-number">6.</span> <span class="nav-text">查询每张表的长度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取表的名称"><span class="nav-number">7.</span> <span class="nav-text">获取表的名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询表下面有多少列"><span class="nav-number">8.</span> <span class="nav-text">查询表下面有多少列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询每张表下列的长度"><span class="nav-number">9.</span> <span class="nav-text">查询每张表下列的长度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取表下列的名称"><span class="nav-number">10.</span> <span class="nav-text">获取表下列的名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取数据"><span class="nav-number">11.</span> <span class="nav-text">获取数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以上所有操作配合Burpsuite食用更佳！"><span class="nav-number">12.</span> <span class="nav-text">以上所有操作配合Burpsuite食用更佳！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#理解最重要，轻喷！"><span class="nav-number">13.</span> <span class="nav-text">理解最重要，轻喷！</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用函数"><span class="nav-number">1.</span> <span class="nav-text">常用函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询数据库长度"><span class="nav-number">2.</span> <span class="nav-text">查询数据库长度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取数据库名称"><span class="nav-number">3.</span> <span class="nav-text">获取数据库名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询有几张表"><span class="nav-number">4.</span> <span class="nav-text">查询有几张表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询每张表的长度"><span class="nav-number">5.</span> <span class="nav-text">查询每张表的长度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取表的名称"><span class="nav-number">6.</span> <span class="nav-text">获取表的名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询表下面有多少列"><span class="nav-number">7.</span> <span class="nav-text">查询表下面有多少列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查询每张表下列的长度"><span class="nav-number">8.</span> <span class="nav-text">查询每张表下列的长度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取表下列的名称"><span class="nav-number">9.</span> <span class="nav-text">获取表下列的名称</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取数据"><span class="nav-number">10.</span> <span class="nav-text">获取数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以上所有操作配合Burpsuite食用更佳！"><span class="nav-number">11.</span> <span class="nav-text">以上所有操作配合Burpsuite食用更佳！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#理解最重要，轻喷！"><span class="nav-number">12.</span> <span class="nav-text">理解最重要，轻喷！</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
