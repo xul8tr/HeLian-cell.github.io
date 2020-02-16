@@ -39,7 +39,7 @@ const ap = new APlayer({
   {
         name: '绕圈',
         artist: 'LeeAlive / 盛哲',
-        url: 'http://m10.music.126.net/20200217010655/4c2db5461ee2a8088fb98441e73afa47/ymusic/11c4/e2e1/2f54/6540e65d0104d19b196bf255370d4f74.mp3',
+        url: 'http://music.163.com/song/media/outer/url?id=536623303.mp3',
         cover: 'http://p2.music.126.net/CYmpd6aNcJ3juYSXiRUAXA==/109951163142450769.jpg?param=130y130',
         lrc: '/dist/music/绕圈.lrc',
       },
