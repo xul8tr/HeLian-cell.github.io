@@ -24,7 +24,7 @@ const ap = new APlayer({
         name: '夢灯籠',
         artist: 'RADWIMPS',
         url: '/dist/music/夢灯籠.mp3',
-        cover: 'dist/music/yourname.jpg',
+        cover: '/dist/music/yourname.jpg',
         lrc: '/dist/music/夢灯籠.lrc',
       },
       
@@ -32,7 +32,7 @@ const ap = new APlayer({
         name: '成都',
         artist: '赵雷',
         url: '/dist/music/成都.mp3',
-        cover: 'dist/music/成都.jpg',
+        cover: '/dist/music/成都.jpg',
         lrc: '/dist/music/成都.lrc',
       },
     ]
