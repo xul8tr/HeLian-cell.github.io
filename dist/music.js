@@ -62,5 +62,5 @@ const ap = new APlayer({
       },
 
 
-    ]http://
+    ]
 });
