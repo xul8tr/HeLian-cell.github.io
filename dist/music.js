@@ -48,9 +48,19 @@ const ap = new APlayer({
         name: '藏',
         artist: '徐梦圆 / 双笙',
         url: 'http://music.163.com/song/media/outer/url?id=534540498.mp3',
-        cover: 'http://p1.music.126.net/9cySfhHshoKksSkAxwVVqw==/109951163175751210.jpg?param=130y130"',
+        cover: 'http://p1.music.126.net/9cySfhHshoKksSkAxwVVqw==/109951163175751210.jpg?param=130y130',
         lrc: '/dist/music/藏.lrc',
       },
 
-    ]
+  
+  {
+        name: '飘向北方',
+        artist: '那吾克热-NW / 尤长靖',
+        url: 'http://music.163.com/song/media/outer/url?id=1308818967.mp3',
+        cover: 'http://p1.music.126.net/D-mpVLLwMrA-hPu0QPYUNQ==/109951163551410648.jpg?param=130y130',
+        lrc: '/dist/music/飘向北方.lrc',
+      },
+
+
+    ]http://
 });
