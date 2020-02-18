@@ -70,5 +70,16 @@ const ap = new APlayer({
         lrc: '/dist/music/Cold.lrc',
       },
 
+
+  {
+      name: '起风了',
+      artist: '买辣椒也用券',
+      url: '/dist/music/起风了.mp3',
+      cover: 'http://p2.music.126.net/c0nzSObvxF_DftayAJjXsw==/109951162864860506.jpg?param=130y130',
+      lrc: '/dist/music/起风了.lrc',
+
+    },
+    
+    
     ]
 });
