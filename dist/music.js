@@ -60,7 +60,15 @@ const ap = new APlayer({
         cover: 'http://p1.music.126.net/D-mpVLLwMrA-hPu0QPYUNQ==/109951163551410648.jpg?param=130y130',
         lrc: '/dist/music/飘向北方.lrc',
       },
-
+  
+  
+  {
+        name: 'Cold',
+        artist: 'NEFFEX',
+        url: 'http://music.163.com/song/media/outer/url?id=1353212443.mp3',
+        cover: 'http://p2.music.126.net/Cj-fQ7sex4lbPUDEU5poZA==/109951163940993674.jpg?param=130y130',
+        lrc: '/dist/music/Cold.lrc',
+      },
 
     ]
 });
