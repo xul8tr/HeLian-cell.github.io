@@ -82,7 +82,7 @@ const ap = new APlayer({
     
     
   {
-      name: '君の名は。- shelter',
+      name: '君の名は。',
       artist: '赫连',
       url: '/dist/music/君の名は.mp3',
       cover: '/dist/music/君の名は.jpg',
