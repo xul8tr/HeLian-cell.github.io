@@ -86,7 +86,7 @@ const ap = new APlayer({
       artist: '赫连',
       url: '/dist/music/君の名は.mp3',
       cover: '/dist/music/君の名は.jpg',
-      
+      lrc: '/dist/music/君の名は.lrc'
 
     },
     
