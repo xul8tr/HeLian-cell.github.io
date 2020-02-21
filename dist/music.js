@@ -20,7 +20,20 @@ const ap = new APlayer({
         lrc: '/dist/music/yourname.lrc',
         
       },
-	{
+
+
+  {
+        name: '君の名は。',
+        artist: '赫连',
+        url: '/dist/music/君の名は.mp3',
+        cover: '/dist/music/君の名は.jpg',
+        lrc: '/dist/music/君の名は.lrc'
+  
+      },
+
+  
+  
+  {
         name: '夢灯籠',
         artist: 'RADWIMPS',
         url: '/dist/music/夢灯籠.mp3',
@@ -81,14 +94,7 @@ const ap = new APlayer({
     },
     
     
-  {
-      name: '君の名は。',
-      artist: '赫连',
-      url: '/dist/music/君の名は.mp3',
-      cover: '/dist/music/君の名は.jpg',
-      lrc: '/dist/music/君の名は.lrc'
-
-    },
+  
     
     ]
 });
