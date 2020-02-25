@@ -41,20 +41,13 @@ const ap = new APlayer({
         lrc: '/dist/music/夢灯籠.lrc',
       },
       
+  
   {
-        name: '成都',
-        artist: '赵雷',
-        url: '/dist/music/成都.mp3',
-        cover: '/dist/music/成都.jpg',
-        lrc: '/dist/music/成都.lrc',
-      },
-
-  {
-        name: '绕圈',
-        artist: 'LeeAlive / 盛哲',
-        url: 'http://music.163.com/song/media/outer/url?id=536623303.mp3',
-        cover: 'http://p2.music.126.net/CYmpd6aNcJ3juYSXiRUAXA==/109951163142450769.jpg?param=130y130',
-        lrc: '/dist/music/绕圈.lrc',
+        name: 'Rain',
+        artist: '言ノ葉',
+        url: 'http://music.163.com/song/media/outer/url?id=26418808.mp3',
+        cover: 'http://p1.music.126.net/Wpd4B7lLDV_F1uOe3fTtcQ==/18345351510230167.jpg?param=130y130',
+        lrc: '/dist/music/Rain.lrc',
       },
       
   {
@@ -84,14 +77,11 @@ const ap = new APlayer({
       },
 
 
-  {
-      name: '起风了',
-      artist: '买辣椒也用券',
-      url: '/dist/music/起风了.mp3',
-      cover: 'http://p2.music.126.net/c0nzSObvxF_DftayAJjXsw==/109951162864860506.jpg?param=130y130',
-      lrc: '/dist/music/起风了.lrc',
+  
+  
+  
+  
 
-    },
-    
+
     ]
 });
